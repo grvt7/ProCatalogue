@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container">
+    <div class="container-table">
+        <table style="width:87%;">
+            <tr>
+                <td class="colOne">
+                    <img class="prodImage"
+                        src="{{productDetails.imageUrl}}"
+                        alt="{{productDetails.productName}}">
+                </td>
+                <td class="colTwo">
+                    <div class="colTwo-data">
+                        <h4>{{productDetails.productBrand}}</h4>
+                        <h1 class="colTwo-data-name">{{productDetails.productName}}</h1>
+                        <h2 class="colTwo-data-price">Price : &nbsp; <h1>{{productDetails.price | currency:'INR'}}</h1></h2>
+                        <form #pinCode="ngForm" (ngSubmit)="searchPinCode(pinCode.value)">
+                            <h2>Check For Delivary:
+                                <input ngModel matInput name="pin" placeholder="Pin Code" class="pinInput">
+                                <button mat-raised-button class="check">Check</button>
+                            </h2>
+                            <span *ngIf="isDeliverable">Delivary Possible in &nbsp; {{pinData.days}} &nbsp; days.</span>
+                            <span *ngIf="notDeliver">Delivary Not Possible.</span>
+                        </form>
+                        <h2 class="colTwo-data-price">Description</h2>
+                        <p class="description">{{productDetails.description}}</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+<!-- [formGroup]="pinCode" (ngSubmit)="checkDelivary()" -->

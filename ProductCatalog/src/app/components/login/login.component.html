@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container">
+    <h2>Login with your Email and Password</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="userLogin()" method="post">
+        <mat-form-field appearance="fill" class="width-100">
+            <mat-label>Email address</mat-label>
+            <input matInput placeholder="Ex. pat@example.com" formControlName="email">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="width-100">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+        <br>
+        <h2>Dont Have An Account Yet? <a [href]="['register']">Sign Up</a> Now </h2>
+        <button mat-raised-button class="login-btn">Login</button>
+    </form>
+</div>

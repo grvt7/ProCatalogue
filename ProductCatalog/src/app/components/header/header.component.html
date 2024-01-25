@@ -1,0 +1,15 @@
+<div class="search-container">
+    <form class="search-form" [formGroup]="searchBar" (ngSubmit)="searchBarSubmit()">
+        <span class="logo" routerLink="/"><img style="height: 30px;margin-bottom: -10px;" src="assets/title-logo.png"></span>
+        <input
+            class="search-input"
+            name="search"
+            type="text"
+            placeholder="Search for your Favorite Products"
+            formControlName="searchQuery"
+        />
+        <button class="search-button">Search</button>
+    </form>
+    <button mat-raised-button *ngIf="showLogin" class="login" (click)="userLogin()">Sign In</button>
+    <form (ngSubmit)="userLogout()"><button mat-raised-button *ngIf="showLogout" class="login">Logout</button></form>
+</div>

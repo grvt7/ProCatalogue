@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+    <div>
+        <img 
+        class="logo"
+        src="assets/logo.png" 
+        alt="logo"
+        />
+    </div>
+    <div class="bar">
+        <img 
+        class="icon"
+        src="assets/search.png" 
+        alt="logo"
+        />
+        <form [formGroup]="search" (ngSubmit)="searchData()">
+            <input 
+            class="searchbar" 
+            type="text" 
+            title="Search" 
+            placeholder="Search for your Favorite Products"
+            formControlName="query"
+            />
+        </form>
+    </div>
+    <div class="buttons">
+        <button class="button" type="button">Search Products</button>
+    </div>
+</div>

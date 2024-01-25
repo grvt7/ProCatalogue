@@ -1,0 +1,66 @@
+.container{
+    text-align: center;
+}
+.logo{
+    margin-top: 100px;
+    align-content: center;
+    height: 300px;
+}
+.bar{
+    margin:0 auto;
+    width:575px;
+    border-radius:30px;
+    border:1px solid #dcdcdc;
+}
+.icon {
+    height: 20px;
+    margin-bottom: -24px;
+    margin-right: 525px;
+}
+.titleLogo{
+    width:20px;
+}
+.bar:hover{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+.bar:focus-within{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline:none;
+}
+.searchbar{
+    color: black;
+    background-color: #ffffff;
+    height:30px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border:none;
+    width:500px;
+    font-size:16px;
+    outline: none;
+
+    ::placeholder {
+        color: black;
+    }
+}
+.buttons{
+    margin-top:30px;
+}
+.button{
+    background-color: blue;
+    border:none;
+    color:white;
+    font-size:15px;
+    padding: 10px 20px;
+    margin:5px;
+    border-radius:10px;
+    outline:none;
+}
+.button:hover{
+    border: 1px solid #c8c8c8;
+    padding: 9px 19px;
+    color:greenyellow;
+}
+.button:focus{
+    border:1px solid #4885ed;
+    padding: 9px 19px;
+}

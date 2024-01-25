@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="filters">
+    <mat-form-field>
+        <mat-label>Sort</mat-label>
+        <mat-select panelClass="sort-select" [(ngModel)] = "sort" (selectionChange)="sortProduct(sort)">
+            <mat-option value="price">Price</mat-option>
+            <mat-option value="rating">Rating</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div class="products">
+    <ng-container *ngFor="let product of data">
+        <div class="product" (click)="openDetails(product.productId)">
+            <div class="product-thumb-container">
+                <!-- Checks if the game has a image for the card then display the tag
+                *ngIf="game.background_image" -->
+                <img              
+                    src="{{ product.imageUrl }}" 
+                    alt="thumbnail" 
+                    class="product-thumbnail"
+                />
+                <!-- Else Display this paragraph -->
+                <!-- <p *ngIf="!game.background_image">No Image Available</p> -->
+            </div>
+            <div class="product-description">
+                <!-- Adding the name to the card -->
+                <p class="product-name">{{product.productName}}</p>
+            </div>
+        </div>
+    </ng-container>
+</div>

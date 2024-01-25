@@ -1,0 +1,67 @@
+.container {
+    margin-top: 50px;
+    margin-left: 125px;
+}
+table, th, td {
+    border-collapse: collapse;
+}
+
+.prodImage {
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 600px;
+}
+
+.colOne {
+    background-color: grey;
+    width: 510px;
+}
+.colTwo {
+    text-align: left;
+    background-color: lightyellow;
+    
+    &-data {
+        margin-top: -200px;
+        margin-left: 50px;
+        color: grey;
+
+        &-name {
+            color: black;
+            margin-top: -20px;
+        }
+
+        &-price {
+            color: black;
+        }
+    }
+}
+
+.pinInput {
+    background-color: lightgray;
+    width: 150px;
+    font-size: 20px;
+
+    ::placeholder{
+        color: white;   
+    }
+}
+
+.check {
+    margin-left: 3px;
+    height: 35px;
+    background-color: blue;
+    color: white;
+    margin-top: -10px;
+}
+
+.description {
+    font-size: large;
+    color: black;
+}
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
